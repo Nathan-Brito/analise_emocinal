@@ -1,5 +1,5 @@
 import os
-from flask import Flask, request, render_template, jsonify
+from flask import Flask, request, jsonify
 from fer import FER
 import matplotlib.pyplot as plt
 from PIL import Image
@@ -11,7 +11,7 @@ detector = FER()
 @app.route('/')
 def index():
 
-    return render_template('upload.html')
+    return "Bem-vindo à API"
 
 @app.route('/analise_emocional', methods=['POST'])
 def analisar_emocao():
